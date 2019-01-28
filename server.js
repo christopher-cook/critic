@@ -22,7 +22,8 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 //middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
+app.use(express.static('public'));
+app.use('/movies', moviesController);
 //
 app.use(methodOverride('_method'));
 
