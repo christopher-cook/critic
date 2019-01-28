@@ -24,17 +24,17 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 
 //open connection to mongodb
 // db.on('open' , ()=>{});
-
+app.use(methodOverride('_method'));
 // public folder for static
 app.use(express.static('public'));
 
 //middleware
+
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use('/movies', moviesController);
 //
-app.use(methodOverride('_method'));
 
 // app.get('/' , (req, res) => {
 //   res.send('Hello World!');
