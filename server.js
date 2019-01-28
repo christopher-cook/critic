@@ -5,6 +5,7 @@ const methodOverride = require('method-override');
 const mongoose = require ('mongoose');
 const app = express();
 const db = mongoose.connection;
+const moviesController = require('./controllers/moviedb.js');
 
 //PORT
 const PORT = process.env.PORT || 3000;
