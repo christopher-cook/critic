@@ -11,17 +11,19 @@ const moviesController = require('./controllers/moviedb.js');
 const PORT = process.env.PORT || 3000;
 
 //Database
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/' + 'movies';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/' + 'shiza';
 //connect to mongo
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true});
-
+mongoose.connection.once('open', () => {
+  console.log('connected to mongo');
+})
 //Error/success
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
 db.on('connected', () => console.log('mongo connected: ', MONGODB_URI));
 db.on('disconnected', () => console.log('mongo disconnected'));
 
 //open connection to mongodb
-db.on('open' , ()=>{});
+// db.on('open' , ()=>{});
 
 // public folder for static
 app.use(express.static('public'));
