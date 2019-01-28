@@ -11,7 +11,7 @@ const moviesController = require('./controllers/moviedb.js');
 const PORT = process.env.PORT || 3000;
 
 //Database
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/' + 'shiza';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/' + 'herokuTest';
 //connect to mongo
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true});
 
