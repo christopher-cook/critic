@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 const Movie = require('../models/moviedb.js');
 
+
 router.put('/:id', (req, res) => {
   Movie.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedModel) => {
     res.redirect('/movies');
@@ -81,5 +82,6 @@ router.post('/', (req, res) => {
     res.redirect('/movies');
   });
 });
+
 
 module.exports = router;

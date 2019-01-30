@@ -1,15 +1,61 @@
-/* * {
-  background-color: rgba(0,100, 0, 0.3);
-  } */
-  /* .title {
-  display: flex;
+html {
+  background-color: rgba(0, 0, 0, .8);
 }
-.five {
-  display: flex;
-}
-.four {
-  display: block;
-}
+
 h1 {
-  display: block;
-} */
+    font-family: fantasy;
+    color: #dd7c1b;
+    font-size: 4em;
+    text-align: center;
+    margin-top: 100px;
+}
+ul {
+    background-color: #2F89FC;
+}
+li {
+    background-color: #E7E6FC;
+}
+a {
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    margin-top: 4px;
+}
+#update {
+    color: green;
+}
+button {
+    color: black;
+    border: none;
+    cursor: pointer;
+    margin-top: 4px;
+
+}
+.topmost button {
+    color:white;
+}
+.addmovie button {
+    color: blue;
+}
+#delete {
+  background: red;
+}
+input {
+  background-color: lightgray;
+}
+form {
+  color: #ffc60b;
+}
+.tile, .good, .bad {
+  margin-left: 8%;
+  width: 250px;
+}
+.topmost {
+  text-align: right;
+}
+#login, #signup {
+  background-color: blue;
+  border: 2px solid white;
+  border-radius: 2px;
+  font-family: Helvetica;
+}

@@ -2,23 +2,45 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" charset="utf-8"></script>
+    <script src="/js/get.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="/css/movies.css">
     <title></title>
   </head>
+  <div class="topmost">
+    <a href="#"><button type="button" id="login">Log In</button></a>
+    <a href="#"><button type="button" id="signup">Sign Up</button></a>
+  </div>
   <body>
-    <h1>&#161;Spoiler!</h1>
+    <h1>&#161;Kritic!</h1>
+
+      <div class="column" id="pool">
+        <h3>Watched Movies</h3>
+      </div>
       <% for (let i = 0; i < movies.length; i++) {%>
-        <ul>
-          <li>
+        <div class="tile"><ul>
+          <li id="source">
               <a href="/movies/<%=movies[i].id%>"><%=movies[i].name%></a><br />
               Last edited by: <br />
               <a href="/movies/<%=movies[i].id%>/edit"><button>Edit</button></a>
 
               <form action="/movies/<%=movies[i].id%>?_method=DELETE" method="POST">
-              <input type="submit" value="DELETE">
+              <input type="submit" value="DELETE" id="delete">
+              <button type="button" class="fav">Add to Favorites</button>
               </form>
           </li>
         </ul>
+        </div>
       <%}%>
+
+        <div class="column" id="good">
+          <h3>Must's</h3>
+        </div>
+        <div class="column" id="bad">
+          <h3>Baddie's</h3>
+        </div>
+
+
       <div class="addmovie">
         <a href="/movies/new"><button>Add Movie</button></a>
       </div>

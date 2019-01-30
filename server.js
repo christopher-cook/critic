@@ -6,10 +6,10 @@ const mongoose = require ('mongoose');
 const app = express();
 const db = mongoose.connection;
 const moviesController = require('./controllers/moviedb.js');
-
+const session = require('express-session');
 //PORT
 const PORT = process.env.PORT || 3000;
-
+const $ = require('jquery');
 //Database
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/' + 'shiza';
 //connect to mongo
