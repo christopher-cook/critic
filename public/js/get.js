@@ -12,14 +12,10 @@ $(() => {
           success: (data) => {
             moviesReturned.push(data);
 
-            // let movieTitle = moviesReturned["Search"][i].Title;
-            // let movieYear = moviesReturned["Search"][i].Year;
-            // let moviePlot = moviesReturned["Search"][i].Plot;
-
             for (let i = 0; i < 5; i++) {
               const $li = $('<li>').text(moviesReturned[0]["Search"][i].Title).appendTo('.moviesDisplay');
-                          // $('<li>').text(movieYear[i]).appendTo('.moviesDisplay');
-                          // $('<li>').text(moviePlot[i]).appendTo('.moviesDisplay');
+                          $('<li>').text(moviesReturned[0]["Search"][i].Year).appendTo('.moviesDisplay');
+                          $('<li>').text(moviesReturned[0]["Search"][i].Plot).appendTo('.moviesDisplay')
           }
         }
     });
