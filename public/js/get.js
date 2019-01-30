@@ -15,7 +15,7 @@ $(() => {
             for (let i = 0; i < 5; i++) {
               const $li = $('<li>').text(moviesReturned[0]["Search"][i].Title).appendTo('.moviesDisplay');
                           $('<li>').text(moviesReturned[0]["Search"][i].Year).appendTo('.moviesDisplay');
-                          $('<li>').text(moviesReturned[0]["Search"][i].Plot).appendTo('.moviesDisplay')
+                          $('<li>').prepend("<img src ="+ moviesReturned[0]["Search"][i].Poster +">").appendTo('.moviesDisplay');
           }
         }
     });
