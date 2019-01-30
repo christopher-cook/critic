@@ -1,6 +1,9 @@
 html {
   background-color: rgba(0, 0, 0, .8);
 }
+body {
+  display: block;
+}
 
 h1 {
     font-family: fantasy;
@@ -8,6 +11,11 @@ h1 {
     font-size: 4em;
     text-align: center;
     margin-top: 100px;
+}
+
+h3 {
+  color: lime;
+  margin-left: 8%;
 }
 ul {
     background-color: black;
@@ -65,7 +73,24 @@ img {
   margin-left:5px;
 }
 .moviesDisplay {
-  display: inline-block;
   list-style: none;
   margin-left: 10px;
+}
+.master {
+  display: flex;
+}
+.column {
+  width: 40%;
+  float: left;
+}
+.column1 {
+  float: right;
+  width: 40%;
+}
+.seed {
+  float:left;
+}
+#mySearch {
+  color: blue;
+  font-weight: 700;
 }

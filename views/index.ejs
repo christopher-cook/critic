@@ -7,19 +7,21 @@
     <link rel="stylesheet" href="/css/movies.css">
     <title></title>
   </head>
-  <div class="topmost">
-    <a href="#"><button type="button" id="login">Log In</button></a>
-    <a href="#"><button type="button" id="signup">Sign Up</button></a>
-  </div>
+      <div class="topmost">
+        <a href="#"><button type="button" id="login">Log In</button></a>
+        <a href="#"><button type="button" id="signup">Sign Up</button></a>
+        <div class="seed">
+          <input type="search" id="search" placeholder="Search movie title">
+          <button type="button" id="mySearch">Search</button>
+        </div>
+      </div>
+      <header>
+        <h1>Critic!</h1>
+        </header>
   <body>
-    <h1>&#161;Critic!</h1>
-    <div class="moviesDisplay">
-
-    </div>
-
+    <div class="master">
       <div class="column" id="pool">
         <h3>Watched Movies</h3>
-      </div>
       <% for (let i = 0; i < movies.length; i++) {%>
         <div class="tile"><ul>
           <li id="source">
@@ -29,27 +31,28 @@
 
               <form action="/movies/<%=movies[i].id%>?_method=DELETE" method="POST">
               <input type="submit" value="DELETE" id="delete">
-              <button type="button" class="fav">Add to Favorites</button>
+              <!-- <button type="button" class="fav">Add to Favorites</button> -->
               </form>
           </li>
         </ul>
         </div>
       <%}%>
+      </div>
+      <div class="column1">
+          <div class="moviesDisplay">
 
-        <div class="column" id="good">
+          </div>
+      </div>
+      </div>
+        <!-- <div class="column" id="good">
           <h3>Must's</h3>
         </div>
         <div class="column" id="bad">
           <h3>Baddie's</h3>
-        </div>
-
-
+        </div> -->
       <div class="addmovie">
         <a href="/movies/new"><button>Add Movie</button></a>
       </div>
-      <div class="seed">
-        <input type="search" id="search" placeholder="Search movie title">
-        <button type="button" id="mySearch">Search</button>
-      </div>
+
   </body>
 </html>
