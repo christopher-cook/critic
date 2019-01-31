@@ -1,5 +1,4 @@
 html {
-  /* background-color: rgba(0, 0, 0, .8); */
   background-color: #3C415E;
 }
 body {
@@ -15,11 +14,14 @@ h1 {
     text-shadow: 5px 5px black;
 }
 h3 {
+  font-size: 30px;
   color: #fcdc74;
   text-shadow: 2px 2px #0060ca;
-  margin-left: 8%;
+  margin-left: 12%;
+  font-family: 'Amatic SC', cursive;
 }
 h4 {
+  font-family: helvetica;
   color: #232931;
   text-shadow: 1px 1px #f73859;
 }
@@ -28,6 +30,7 @@ ul {
     width: 45%;
 }
 li {
+  color: lightblue;
   padding-left: 12px;
 }
 a {
@@ -51,10 +54,15 @@ button {
 
 }
 .topmost button {
+    font-family: helvetica;
     color:white;
 }
 .addmovie button {
+    margin-left: 8%;
+    position: fixed;
     color: blue;
+    border-radius: 2px;
+
 }
 #delete {
   background: red;
@@ -67,9 +75,10 @@ form {
 }
 .tile, .good, .bad {
   margin-left: 8%;
-  width: 250px;
+  width: 350px;
 }
 .topmost {
+  margin-top: 20px;
   text-align: right;
 }
 #login, #signup {
@@ -98,6 +107,7 @@ img {
 .column1 {
   float: right;
   width: 40%;
+  background-color: #574e6d;
 }
 .seed {
   float:left;
@@ -110,7 +120,9 @@ img {
 #search {
   box-shadow: 10px 5px 5px black;
   border: 1px solid black;
-  border-radius: 2px;
+  border-radius: 4px;
+  height: 25px;
+  width: 186px;
 }
 #delete {
   color: black;
@@ -121,7 +133,12 @@ img {
   background-color: #dfe2e2;
 }
 #pending {
-  background: #738598;
+  /* background: #738598; */
   list-style: none;
   width: 55%;
+}
+#show {
+  background-color: #e9eec9;
+  color: blue;
+  font-family: 'Source Sans Pro', sans-serif;
 }

@@ -3,15 +3,16 @@
   <head>
     <meta charset="utf-8">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" charset="utf-8"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" href="/css/movies.css">
     <title></title>
   </head>
   <body>
     <h1><%=movies.name%></h1>
     <ul>
-      <li><h4>Synopsis:</h4><%=movies.synop%></li>
-      <li><h4>Favorite Actor/Actress:</h4><%=movies.favActor%></li>
-      <li><h4>Rating:</h4><%=movies.rating%>
+      <li id="show"><h4>Synopsis:</h4><%=movies.synop%></li>
+      <li id="show"><h4>Favorite Actor/Actress:</h4><%=movies.favActor%></li>
+      <li id="show"><h4>Rating:</h4><%=movies.rating%>
     </ul>
     <a href="/movies"><button>Back to Movies</button></a>
   </body>

@@ -1,5 +1,3 @@
-//dependencies
-
 const express = require('express');
 const methodOverride = require('method-override');
 const mongoose = require ('mongoose');
@@ -23,7 +21,7 @@ db.on('connected', () => console.log('mongo connected: ', MONGODB_URI));
 db.on('disconnected', () => console.log('mongo disconnected'));
 
 //open connection to mongodb
-// db.on('open' , ()=>{});
+
 app.use(methodOverride('_method'));
 // public folder for static
 app.use(express.static('public'));
@@ -34,9 +32,5 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use('/movies', moviesController);
-//
 
-// app.get('/' , (req, res) => {
-//   res.send('Hello World!');
-// });
 app.listen(PORT, () => console.log( 'Listening on port:', PORT));
