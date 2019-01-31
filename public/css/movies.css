@@ -1,5 +1,6 @@
 html {
-  background-color: rgba(0, 0, 0, .8);
+  /* background-color: rgba(0, 0, 0, .8); */
+  background-color: #3C415E;
 }
 body {
   display: block;
@@ -8,29 +9,39 @@ body {
 h1 {
     font-family: fantasy;
     color: #dd7c1b;
-    font-size: 4em;
+    font-size: 6em;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 50px;
+    text-shadow: 5px 5px black;
 }
-
 h3 {
-  color: lime;
+  color: #fcdc74;
+  text-shadow: 2px 2px #0060ca;
   margin-left: 8%;
 }
+h4 {
+  color: #232931;
+  text-shadow: 1px 1px #f73859;
+}
 ul {
-    background-color: black;
+    list-style: none;
+    width: 45%;
 }
 li {
-    background-color: #E7E6FC;
+  padding-left: 12px;
 }
 a {
     color: white;
-    background-color: blue;
+    background-color: #34699a;
     text-decoration: none;
     margin-top: 4px;
 }
 #update {
     color: green;
+}
+#cancelB {
+  color: lightyellow;
+  background-color: gray;
 }
 button {
     color: black;
@@ -62,14 +73,15 @@ form {
   text-align: right;
 }
 #login, #signup {
+  box-shadow: 8px 4px 4px black;
   background-color: blue;
   border: 2px solid white;
   border-radius: 2px;
   font-family: Helvetica;
 }
 img {
-  width: 15%;
-  height:22%;
+  width:60%;
+  height:80%;
   margin-left:5px;
 }
 .moviesDisplay {
@@ -91,6 +103,25 @@ img {
   float:left;
 }
 #mySearch {
+  box-shadow: 10px 5px 5px black;
   color: blue;
   font-weight: 700;
+}
+#search {
+  box-shadow: 10px 5px 5px black;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+#delete {
+  color: black;
+}
+#source {
+  border-radius: 15px;
+  box-shadow: 8px 4px 4px #ffe981;
+  background-color: #dfe2e2;
+}
+#pending {
+  background: #738598;
+  list-style: none;
+  width: 55%;
 }
